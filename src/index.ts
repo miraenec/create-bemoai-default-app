@@ -42,14 +42,15 @@ const FLUTTER_DEV_PACKAGES = [
 async function main() {
   const answers = await inquirer.prompt([
     {
+      type: "input",
       name: "projectName",
       message: "Project name?",
       default: "my-app",
     },
     {
+      type: "list",
       name: "type",
       message: "Project type?",
-      type: "list",
       choices: ["next", "expo", "flutter"],
     },
   ]);
